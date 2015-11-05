@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,18 @@
   "bugs": {
     "url": "https://github.com/zhangda89/gulp-rev/issues"
   },
-  "homepage": "https://github.com/zhangda89/gulp-rev#readme"
+  "homepage": "https://github.com/zhangda89/gulp-rev#readme",
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "modify-filename": "^1.1.0",
+    "object-assign": "^4.0.1",
+    "rev-hash": "^1.0.0",
+    "rev-path": "^1.0.0",
+    "sort-keys": "^1.0.0",
+    "through2": "^2.0.0",
+    "vinyl-file": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
 }
