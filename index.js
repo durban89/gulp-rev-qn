@@ -156,6 +156,15 @@ plugin.manifest = function (pth, opts) {
 				return;
 			}
 
+			if(typeof opts.keyPrefix === 'string' && opts.keyPrefix && manifest){
+				var tmpMainFest = {};
+				for(let key in manifest){
+					tmpMainFest[opts.keyPrefix + '/' + key] = manifest[key];
+				}
+
+				manifest = tmpMainFest;
+			}
+			
 			if (opts.merge && !manifestFile.isNull()) {
 				var oldManifest = {};
 
