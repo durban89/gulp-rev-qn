@@ -137,7 +137,9 @@ plugin.manifest = function (pth, opts) {
 
 		firstFileBase = firstFileBase || file.base;
 
-		var revisionedFile = relPath(firstFileBase, file.path);
+		// file.path 暂时出现了 https://xxx.xxx -> https:/xxx.xxx的情况，从file.path取值的话就会得到这个结果，为了对应需求，做下修复
+		// 使用的时候请结合gulp-qn-upload使用
+		var revisionedFile = relPath(firstFileBase, file.websitePath);
 		var originalFile = path.join(path.basename(file.revOrigPath)).replace(/\\/g, '/');
 
 		manifest[originalFile] = revisionedFile;

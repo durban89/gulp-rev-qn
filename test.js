@@ -1,8 +1,9 @@
 'use strict';
-var path = require('path');
-var assert = require('assert');
-var gutil = require('gulp-util');
-var rev = require('./');
+const path = require('path');
+const assert = require('assert');
+const gutil = require('gulp-util');
+const rev = require('./');
+require('mocha');
 
 it('should rev files', function (cb) {
 	var stream = rev();

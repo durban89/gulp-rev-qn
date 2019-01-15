@@ -1,23 +1,22 @@
 {
   "name": "gulp-rev-qn",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "./node_modules/.bin/mocha test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhangda89/gulp-rev.git"
+    "url": "git+https://github.com/durban89/gulp-rev-qn.git"
   },
   "author": "dapeng89",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zhangda89/gulp-rev/issues"
+    "url": "https://github.com/durban89/gulp-rev-qn/issues"
   },
-  "homepage": "https://github.com/zhangda89/gulp-rev#readme",
+  "homepage": "https://github.com/durban89/gulp-rev-qn#readme",
   "dependencies": {
-    "gulp-util": "^3.0.7",
     "modify-filename": "^1.1.0",
     "object-assign": "^4.0.1",
     "rev-hash": "^1.0.0",
@@ -27,6 +26,7 @@
     "vinyl-file": "^1.1.0"
   },
   "devDependencies": {
+    "gulp-util": "^3.0.8",
     "mocha": "^2.3.3"
   }
 }
