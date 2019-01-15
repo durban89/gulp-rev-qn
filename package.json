@@ -1,6 +1,6 @@
 {
   "name": "gulp-rev-qn",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/durban89/gulp-rev-qn.git"
   },
-  "author": "dapeng89",
+  "author": "durban.zhang <durban.zhang@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/durban89/gulp-rev-qn/issues"

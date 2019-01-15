@@ -5,7 +5,7 @@ npm install gulp-rev-qn
 const rev = require('gulp-rev-qn');
 ```
 
-请配合gulp-qn-upload这个库一起使用
+请配合[gulp-qn-upload](https://www.npmjs.com/package/gulp-qn-upload)这个库一起使用
 ```
 const qn = require('gulp-qn-upload);
 const qiniu_options = {
