@@ -352,11 +352,13 @@ it('should handle a . in the folder name', function (cb) {
 
 
 it('website url should respect directories', function (cb) {
-	var stream = rev.manifest();
+	const stream = rev.manifest({
+		 keyPrefix: '/lib',
+	});
 
 	stream.on('data', function (newFile) {
 		var MANIFEST = {};
-		MANIFEST[path.join('lib', 'unicorn.css')] = 'https://www.xxx.foo' + '/' + 'unicorn-d41d8cd98f.css';
+		MANIFEST[path.join('/lib', 'unicorn.css')] = 'https://www.xxx.foo' + '/' + 'unicorn-d41d8cd98f.css';
 
 		assert.equal(newFile.relative, 'rev-manifest.json');
 		assert.deepEqual(JSON.parse(newFile.contents.toString()), MANIFEST);
@@ -376,6 +378,6 @@ it('website url should respect directories', function (cb) {
 	file1.revName = 'unicorn-d41d8cd98f.css';
 	file1.websitePath = 'https://www.xxx.foo/unicorn-d41d8cd98f.css',
 
-		stream.write(file1);
+	stream.write(file1);
 	stream.end();
 });

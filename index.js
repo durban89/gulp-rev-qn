@@ -140,12 +140,10 @@ plugin.manifest = function (pth, opts) {
 		// file.path 暂时出现了 https://xxx.xxx -> https:/xxx.xxx的情况，从file.path取值的话就会得到这个结果，为了对应需求，做下修复
 		// 使用的时候请结合gulp-qn-upload使用
 		let revisionedFile = '';
-		let revisionedFile1 = '';
 		let originalFile = '';
 		if (file.websitePath) {
 			revisionedFile = relPath(firstFileBase, file.websitePath);
-			revisionedFile1 = relPath(path.resolve(file.cwd, file.base), path.resolve(file.cwd, file.path));
-			originalFile = path.join(path.dirname(revisionedFile1), path.basename(file.revOrigPath)).replace(/\\/g, '/');
+			originalFile = path.join(path.basename(file.revOrigPath)).replace(/\\/g, '/');
 		} else {
 			revisionedFile = relPath(path.resolve(file.cwd, file.base), path.resolve(file.cwd, file.path));
 			originalFile = path.join(path.dirname(revisionedFile), path.basename(file.revOrigPath)).replace(/\\/g, '/');
